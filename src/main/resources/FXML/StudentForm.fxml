@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:id="grid" alignment="CENTER" hgap="100.0" prefHeight="369.0" prefWidth="610.0" vgap="10.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StudentFormController"> <!-- Adjust the package to match your project -->
+
+    <!-- Form Title -->
+    <Label contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" scaleX="2.0" scaleY="2.0" text="New Student" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+
+    <!-- First Name -->
+    <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="firstNameField" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="5" />
+
+    <!-- Middle Name -->
+    <Label text="Middle Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="middleNameField" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <!-- Last Name -->
+    <Label text="Last Name:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="lastNameField" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+    <!-- Address -->
+    <Label text="Address:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <TextField fx:id="addressField" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+
+    <!-- Phone Number -->
+    <Label text="Phone Number:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+    <TextField fx:id="phoneNumberField" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+
+    <!-- Email -->
+    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <TextField fx:id="emailField" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+
+    <!-- Gender -->
+    <Label text="Gender:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+    <HBox GridPane.columnIndex="3" GridPane.rowIndex="7">
+        <RadioButton fx:id="maleRadio" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="femaleRadio" text="Female" toggleGroup="$genderGroup" />
+    </HBox>
+
+    <!-- Save Button -->
+    <Button fx:id="saveButton" onAction="#handleSaveButtonAction" text="Save" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+   <TextField fx:id="lastNameField1" layoutX="394.0" layoutY="137.0" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="90.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="20.0" minHeight="15.0" prefHeight="20.0" />
+      <RowConstraints maxHeight="27.0" minHeight="22.0" prefHeight="22.0" />
+   </rowConstraints>
+
+</GridPane>
